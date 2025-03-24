@@ -25,7 +25,7 @@ class FpsUnlocker implements IPostDBLoadMod
             this.isFikaInstalled = false;
         }
 
-        tables.settings.config.FramerateLimit.MaxFramerateLobbyLimit = this.isFikaInstalled
+        tables.settings.config.FramerateLimit.MaxFramerateLobbyLimit = this.isFikaInstalled && this.modConfig["framerate"] > 144
             ? Number(this.modConfig["framerate"])
             : Number(144)
 
